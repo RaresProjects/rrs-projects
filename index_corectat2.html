@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RRS Projects</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', serif;
+            background: url('bmw_backround.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        h1 {
+            font-size: 18pt;
+            margin-top: 50px;
+        }
+        .text-block, .key-brush {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 10px;
+        }
+        .visible {
+            opacity: 1;
+        }
+        img.key-brush {
+            max-width: 300px;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+            cursor: default;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1 id="title">RRS Projects</h1>
+
+        <div class="text-block" id="text1">
+            Cu totii stim frustrarea vizuala cand vedem defectele in timp ale elementelor de interior trim, consola centrala, bricheta si in general, plastic a carei vopsea este afectata din cauza varstei si razelor UV de vara calduroasa alaturi de soare puternic, de aceea RRS Projects va prezinta procesul de restaurare unor elemente de interior ale unui BMW e46.
+        </div>
+
+        <img src="imagine_cu_cheie_si_pensula.jpg" alt="cheie si pensula" class="key-brush" id="image1" />
+
+        <div class="text-block" id="text2">
+            Un proces lung si cu atentie la detalii inca de la bun inceput, sanding cu diferite numere abrazive, wet sanding si dry sanding, finishing touches before primer, alegerea de a folosi primer grund a fost pentru a preveni ulterioare defecte de material iar dupa vopsea 2k. Enjoy!
+        </div>
+
+        <div class="text-block" id="disclaimer">
+            All work reserved for blog and entertaining reasons only.
+        </div>
+
+        <!-- Poze și texte suplimentare -->
+        <img src="poza1.jpg" alt="Consola centrala afectata" class="key-brush" id="img-poza1" />
+        <div class="text-block" id="text-poza1">
+            Aici se poate vedea foarte clar cat de afectata a fost consola din imagine, o consola centrala a unui bmw e46 coupe 325ci a carei varsta si defect, isi spune cuvantul in totalitate, ca urmare se va incepe procesul de restaurare prin o decontaminare in prima faza, o analiza a defectelor, o constatare completa.
+        </div>
+
+        <img src="poza2.jpg" alt="Aplicare foi abrazive" class="key-brush" id="img-poza2" />
+        <div class="text-block" id="text-poza2">
+            Ca urmare vom incepe prin a aplica foi abrazive de 400, 600, 800, 1000 iar ulterior dupa aplicarea primerului vom folosi foi abrazive fine de regula 2000 3000 pentru a scoate defectele in plus.
+        </div>
+
+        <img src="poza3.jpg" alt="Aplicare grund filler" class="key-brush" id="img-poza3" />
+        <div class="text-block" id="text-poza3">
+            Asadar, dupa procesul de indreptare a meterialului s-a aplicat si grund filler.
+        </div>
+
+        <img src="poza4.jpg" alt="Rezultatul final restaurare consola" class="key-brush" id="img-poza4" />
+        <div class="text-block" id="text-poza4">
+            In cele din urma rezultatul vorbeste de la sine, un rezultat cu o reusita excelenta si un aspect de nou semi fabricat in masina, o metoda simpla dar de durata pentru a readuce la viata elementele de interior deteriorate.
+        </div>
+    </div>
+
+    <script>
+        const elements = [
+            document.getElementById('title'),
+            document.getElementById('text1'),
+            document.getElementById('image1'),
+            document.getElementById('text2'),
+            document.getElementById('disclaimer'),
+            document.getElementById('img-poza1'),
+            document.getElementById('text-poza1'),
+            document.getElementById('img-poza2'),
+            document.getElementById('text-poza2'),
+            document.getElementById('img-poza3'),
+            document.getElementById('text-poza3'),
+            document.getElementById('img-poza4'),
+            document.getElementById('text-poza4'),
+        ];
+
+        function handleScroll() {
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>
